@@ -9,7 +9,7 @@ QGIS-based practical labs and examples drawn entirely from Cambodia.
 សៀវភៅសិក្សា GIS ពេញលេញជាភាសាខ្មែរ សម្រាប់វគ្គសិក្សា ១ ឆមាស (១៥ សប្ដាហ៍)
 ជាមួយលំហាត់អនុវត្តលើ QGIS និងឧទាហរណ៍ក្នុងបរិបទកម្ពុជា។
 
-📖 **Read online:** https://USERNAME.github.io/gis-fundamentals-km/
+📖 **Read online:** https://USERNAME.github.io/gis-fundamentals/
 
 ---
 
