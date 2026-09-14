@@ -8,18 +8,32 @@
 
 :root {
   /* ---- TO SWITCH TO SIEMREAP ----
-     Comment out the two lines below and uncomment the two after them.
+     Comment out the first line below and uncomment the second.
      Note: Siemreap has only one weight, so bold text will be
      synthesised by the browser and will look slightly smeared. */
-  --km-body: 'Battambang', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --km-head: 'Battambang', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --km-font: 'Battambang';
+  /* --km-font: 'Siemreap'; */
 
-  /* --km-body: 'Siemreap', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; */
-  /* --km-head: 'Siemreap', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; */
+  --km-stack: var(--km-font), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --km-body: var(--km-stack);
+  --km-head: var(--km-stack);
 
-  /* Moul is the traditional Khmer display face — used only on the site title.
+  /* Moul is the traditional Khmer display face — site title only.
      Never use it for body text; it is unreadable at small sizes. */
-  --km-display: 'Moul', 'Battambang', serif;
+  --km-display: 'Moul', var(--km-font), serif;
+
+  /* Material composes its own font stack from these two variables and
+     applies it theme-wide. Overriding them here is what actually makes
+     the change stick in the nav, header, search and footer. */
+  --md-text-font: var(--km-font);
+  --md-text-font-family: var(--km-stack);
+  --md-code-font: 'Roboto Mono';
+}
+
+/* Catch anything Material styles that the rules below don't name */
+.md-grid, .md-container, .md-main, .md-sidebar, .md-search__input,
+.md-tabs, .md-footer, button, input, select, textarea {
+  font-family: var(--km-stack);
 }
 
 body, .md-typeset, .md-nav, .md-header, .md-footer {
