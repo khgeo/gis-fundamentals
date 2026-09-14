@@ -1,0 +1,114 @@
+site_name: មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
+site_description: សៀវភៅសិក្សា GIS ជាភាសាខ្មែរ សម្រាប់វគ្គសិក្សា ១ ឆមាស
+site_author: YAM Sarath
+# CHANGE THIS to your GitHub Pages URL:
+site_url: https://USERNAME.github.io/gis-fundamentals-km/
+repo_url: https://github.com/USERNAME/gis-fundamentals-km
+repo_name: gis-fundamentals-km
+edit_uri: edit/main/docs/
+copyright: CC BY-SA 4.0 — អាចប្រើ និងកែសម្រួលបាន ដោយដកស្រង់ប្រភព
+
+theme:
+  name: material
+  language: en          # Material has no Khmer UI pack; content is Khmer
+  font: false           # disable Google Fonts CDN; we load Khmer fonts in CSS
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: ប្ដូរទៅរបៀបងងឹត
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: ប្ដូរទៅរបៀបភ្លឺ
+
+extra_css:
+  - assets/css/khmer.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: "¶"
+      toc_depth: 3
+
+plugins:
+  - search
+  # Uncomment after `pip install mkdocs-with-pdf` to build a single PDF:
+  # - with-pdf:
+  #     output_path: pdf/gis-fundamentals-km.pdf
+  #     cover_title: មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
+  #     cover_subtitle: សៀវភៅសិក្សា ១ ឆមាស
+
+nav:
+  - ទំព័រដើម: index.md
+  - កម្មវិធីសិក្សា: syllabus.md
+  - ផ្នែកទី១ — មូលដ្ឋានគ្រឹះ:
+      - ជំពូក ១ — អ្វីទៅជា GIS?: ch01-introduction.md
+      - ជំពូក ២ — ធម្មជាតិនៃទិន្នន័យ: ch02-geographic-data.md
+      - ជំពូក ៣ — ប្រព័ន្ធយោងកូអរដោនេ: ch03-coordinate-systems.md
+  - ផ្នែកទី២ — គំរូទិន្នន័យ:
+      - ជំពូក ៤ — គំរូវ៉ិចទ័រ: ch04-vector-model.md
+      - ជំពូក ៥ — គំរូរ៉ាស្ទ័រ: ch05-raster-model.md
+      - ជំពូក ៦ — គុណលក្ខណៈ និងមូលដ្ឋានទិន្នន័យ: ch06-attributes-database.md
+  - ផ្នែកទី៣ — ការប្រមូល និងគុណភាព:
+      - ជំពូក ៧ — ប្រភពទិន្នន័យ: ch07-data-sources.md
+      - ជំពូក ៨ — គុណភាព និងកំហុស: ch08-data-quality.md
+  - ផ្នែកទី៤ — ការវិភាគលំហ:
+      - ជំពូក ៩ — សំណួរ: ch09-queries.md
+      - ជំពូក ១០ — ការវិភាគវ៉ិចទ័រ: ch10-vector-analysis.md
+      - ជំពូក ១១ — ការវិភាគរ៉ាស្ទ័រ: ch11-raster-analysis.md
+      - ជំពូក ១២ — ផ្ទៃ និងទីសណ្ឋាន: ch12-surface-terrain.md
+  - ផ្នែកទី៥ — ការបង្ហាញ និងគម្រោង:
+      - ជំពូក ១៣ — ការធ្វើផែនទី: ch13-cartography.md
+      - ជំពូក ១៤ — Web GIS: ch14-webgis.md
+      - ជំពូក ១៥ — គម្រោងអនុវត្តន៍: ch15-project.md
+  - លំហាត់អនុវត្ត:
+      - លំហាត់ ១ — ស្គាល់ QGIS: labs/lab01.md
+      - លំហាត់ ២ — ស្រទាប់ និងតារាង: labs/lab02.md
+      - លំហាត់ ៣ — បំប្លែង CRS: labs/lab03.md
+      - លំហាត់ ៤ — បង្កើតស្រទាប់វ៉ិចទ័រ: labs/lab04.md
+      - លំហាត់ ៥ — រូបភាពផ្កាយរណប: labs/lab05.md
+      - លំហាត់ ៦ — Join និង Field Calculator: labs/lab06.md
+      - លំហាត់ ៧ — ទិន្នន័យ OSM: labs/lab07.md
+      - លំហាត់ ៨ — Georeferencing: labs/lab08.md
+      - លំហាត់ ៩ — សំណួរ: labs/lab09.md
+      - លំហាត់ ១០ — បាហ្វ័រ និង Overlay: labs/lab10.md
+      - លំហាត់ ១១ — ពីជគណិតផែនទី: labs/lab11.md
+      - លំហាត់ ១២ — DEM និងអាងទឹក: labs/lab12.md
+      - លំហាត់ ១៣ — ប្លង់ផែនទី: labs/lab13.md
+      - លំហាត់ ១៤ — ផែនទីវេប: labs/lab14.md
+  - ឧបសម្ព័ន្ធ:
+      - ក — ដំឡើង QGIS: appendix/a-qgis-install.md
+      - ខ — ទិន្នន័យកម្ពុជា: appendix/b-cambodia-data.md
+      - គ — ឯកសារយោង: appendix/c-references.md
+  - វាក្យសព្ទបច្ចេកទេស: glossary.md

@@ -1,0 +1,50 @@
+/* Khmer typography for the GIS textbook
+   Noto Sans Khmer is self-hosted-friendly and renders subscripts (ជើងអក្សរ) correctly.
+   Khmer OS Battambang is the common Cambodian academic font — used for headings. */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&family=Noto+Serif+Khmer:wght@400;600&display=swap');
+
+:root {
+  --km-body: 'Noto Sans Khmer', 'Khmer OS Battambang', 'Khmer OS', sans-serif;
+  --km-head: 'Noto Serif Khmer', 'Khmer OS Muol Light', 'Noto Sans Khmer', serif;
+}
+
+body, .md-typeset {
+  font-family: var(--km-body);
+  /* Khmer needs more line height than Latin — subscripts sit below the baseline */
+  line-height: 2.0;
+  font-size: 0.82rem;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3,
+.md-nav__title, .md-header__title {
+  font-family: var(--km-head);
+  line-height: 1.7;
+}
+
+.md-typeset h1 { font-weight: 600; }
+.md-typeset h2 { margin-top: 2.2em; }
+
+/* Tables: Khmer wraps poorly when cramped */
+.md-typeset table:not([class]) { font-size: 0.74rem; line-height: 1.8; }
+.md-typeset table:not([class]) th { font-weight: 600; }
+
+/* Keep code and English terms in a Latin font for legibility */
+code, .md-typeset code, pre, kbd {
+  font-family: 'Roboto Mono', ui-monospace, 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+/* Admonitions used for objectives / warnings */
+.md-typeset .admonition { line-height: 1.9; }
+
+/* Khmer numerals and lists need breathing room */
+.md-typeset ol li, .md-typeset ul li { margin-bottom: 0.5em; }
+
+/* Print / PDF */
+@media print {
+  body, .md-typeset { font-size: 11pt; line-height: 1.9; }
+  .md-typeset h2 { page-break-before: auto; }
+  .md-typeset h1 { page-break-before: always; }
+  .md-typeset h1:first-of-type { page-break-before: avoid; }
+}
