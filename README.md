@@ -9,7 +9,7 @@ QGIS-based practical labs and examples drawn entirely from Cambodia.
 សៀវភៅសិក្សា GIS ពេញលេញជាភាសាខ្មែរ សម្រាប់វគ្គសិក្សា ១ ឆមាស (១៥ សប្ដាហ៍)
 ជាមួយលំហាត់អនុវត្តលើ QGIS និងឧទាហរណ៍ក្នុងបរិបទកម្ពុជា។
 
-📖 **Read online:** https://khgeo.github.io/gis-fundamentals/
+📖 **Read online:** https://USERNAME.github.io/gis-fundamentals-km/
 
 ---
 
@@ -85,5 +85,5 @@ not yet standardised nationally. See `docs/glossary.md` and open an Issue or PR.
 ```
 YAM Sarath (2026). មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
 [Fundamentals of GIS: A Khmer-language textbook]. CC BY-SA 4.0.
-https://github.com/khgeo/gis-fundamentals
+https://github.com/USERNAME/gis-fundamentals-km
 ```
