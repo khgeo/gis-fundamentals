@@ -2,9 +2,9 @@ site_name: មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធ
 site_description: សៀវភៅសិក្សា GIS ជាភាសាខ្មែរ សម្រាប់វគ្គសិក្សា ១ ឆមាស
 site_author: YAM Sarath
 # CHANGE THIS to your GitHub Pages URL:
-site_url: https://USERNAME.github.io/gis-fundamentals-km/
-repo_url: https://github.com/USERNAME/gis-fundamentals-km
-repo_name: gis-fundamentals-km
+site_url: https://khgeo.github.io/gis-fundamentals/
+repo_url: https://github.com/khgeo/gis-fundamentals
+repo_name: gis-fundamentals
 edit_uri: edit/main/docs/
 copyright: CC BY-SA 4.0 — អាចប្រើ និងកែសម្រួលបាន ដោយដកស្រង់ប្រភព
 
