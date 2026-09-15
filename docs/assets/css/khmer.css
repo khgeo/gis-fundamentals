@@ -23,7 +23,7 @@
   /* Display face for the site title and chapter names.
      'Moulpali' is the lighter cut, closest to Khmer OS Muol Light.
      Swap to 'Moul' below if you want the heavier traditional look. */
-  --km-display: 'Moulpali', 'Moul', var(--km-font), serif;
+  --km-display: 'Moul', var(--km-font), serif;
   /* --km-display: 'Moul', var(--km-font), serif; */
 
   /* Material composes its own font stack from these two variables and
