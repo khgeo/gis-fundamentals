@@ -4,7 +4,7 @@
    served by Google Fonts under the SIL Open Font License.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&family=Moulpali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&display=swap');
 
 :root {
   /* ---- TO SWITCH TO SIEMREAP ----
@@ -21,7 +21,7 @@
   /* Moul is the traditional Khmer display face — site title only.
      Never use it for body text; it is unreadable at small sizes. */
   /* Display face for the site title and chapter names.
-     'Moulpali' is the lighter cut, closest to Khmer OS Muol Light.
+     'Moul' is the lighter cut, closest to Khmer OS Muol Light.
      Swap to 'Moul' below if you want the heavier traditional look. */
   --km-display: 'Moul', var(--km-font), serif;
   /* --km-display: 'Moul', var(--km-font), serif; */
@@ -67,7 +67,7 @@ body, .md-typeset, .md-nav, .md-header, .md-footer {
 }
 .md-header__topic:first-child .md-ellipsis {
   font-family: var(--km-display);
-  /* Moul/Moulpali are display faces; bolding them is faux-bold and smears */
+  /* Moul is display faces; bolding them is faux-bold and smears */
   font-weight: 400;
   font-size: 0.74rem;
   line-height: 1.5;
