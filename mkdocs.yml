@@ -38,7 +38,8 @@ theme:
         name: ប្ដូរទៅរបៀបភ្លឺ
 
 extra_css:
-  - https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&display=swap
+  - https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Moul&family=Moulpali&display=swap
+  - 
   - assets/css/khmer.css
 
 markdown_extensions:
