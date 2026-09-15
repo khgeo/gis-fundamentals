@@ -4,7 +4,7 @@
    served by Google Fonts under the SIL Open Font License.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&family=Moulpali&display=swap');
 
 :root {
   /* ---- TO SWITCH TO SIEMREAP ----
@@ -20,7 +20,11 @@
 
   /* Moul is the traditional Khmer display face — site title only.
      Never use it for body text; it is unreadable at small sizes. */
-  --km-display: 'Moul', var(--km-font), serif;
+  /* Display face for the site title and chapter names.
+     'Moulpali' is the lighter cut, closest to Khmer OS Muol Light.
+     Swap to 'Moul' below if you want the heavier traditional look. */
+  --km-display: 'Moulpali', 'Moul', var(--km-font), serif;
+  /* --km-display: 'Moul', var(--km-font), serif; */
 
   /* Material composes its own font stack from these two variables and
      applies it theme-wide. Overriding them here is what actually makes
@@ -54,17 +58,49 @@ body, .md-typeset, .md-nav, .md-header, .md-footer {
 .md-typeset h1 { font-size: 1.6rem; }
 .md-typeset h2 { margin-top: 2.2em; }
 
-/* Site title in the top bar */
+/* Site title in the top bar.
+   Khmer sits tall, so the default block layout pushes it to the top of the
+   bar. Flex-centring the title row is what actually fixes the alignment. */
+.md-header__title, .md-header__topic {
+  display: flex;
+  align-items: center;
+}
 .md-header__topic:first-child .md-ellipsis {
   font-family: var(--km-display);
-  /* Moul is already a heavy display face; bolding it is faux-bold and smears */
+  /* Moul/Moulpali are display faces; bolding them is faux-bold and smears */
   font-weight: 400;
-  font-size: 0.76rem;
-  line-height: 1.9;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  padding-top: 0.1rem;   /* optical nudge: Khmer ascenders sit high */
 }
 
-/* Sidebar navigation — long Khmer chapter names wrap, so give them room */
-.md-nav__link { line-height: 1.75; padding: 0.15rem 0; }
+/* ---- Sidebar navigation ---- */
+
+/* Chapter entries (top level): display face, no bold, one step smaller */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-family: var(--km-display);
+  font-weight: 400;
+  font-size: 0.68rem;
+  line-height: 1.7;
+}
+
+/* Keep the gap BETWEEN chapters, which already reads well */
+.md-nav--primary > .md-nav__list > .md-nav__item { margin-top: 0.45rem; }
+
+/* Lesson entries (nested): tighter than chapters */
+.md-nav--primary .md-nav .md-nav__link {
+  font-family: var(--km-stack);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  padding: 0;
+}
+.md-nav--primary .md-nav .md-nav__item {
+  margin: 0.1rem 0;
+  padding: 0;
+}
+
+/* Fallback for any nav link not caught above */
+.md-nav__link { line-height: 1.6; }
 
 /* Tables: Khmer wraps badly when cramped */
 .md-typeset table:not([class]) { font-size: 0.72rem; line-height: 1.75; }
