@@ -97,7 +97,7 @@ body, .md-typeset {
 .md-nav--primary .md-nav .md-nav__link {
   font-family: var(--km-read-stack);
   font-weight: 400;
-  font-size: 0.74rem;
+  font-size: 0.6rem;
   line-height: 1.45;
   padding: 0;
 }
