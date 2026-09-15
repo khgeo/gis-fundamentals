@@ -45,7 +45,7 @@ body, .md-typeset, .md-nav, .md-header, .md-footer,
 body, .md-typeset {
   /* Siemreap is lighter and sits smaller than Battambang at the same
      size, so it needs a step up to stay comfortable at reading length. */
-  font-size: 0.84rem;
+  font-size: 0.75rem;
   line-height: 1.95;
 }
 
