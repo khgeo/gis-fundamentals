@@ -1,96 +1,103 @@
 /* ============================================================
    Khmer typography — Fundamentals of GIS textbook
-   Fonts: Battambang & Siemreap by Danh Hong (KhmerOS project),
+   Fonts: Battambang, Siemreap & Moul by Danh Hong (KhmerOS project),
    served by Google Fonts under the SIL Open Font License.
+
+   TWO-FONT SYSTEM
+     Siemreap    running text: lessons, articles, tables, lists
+     Battambang  anything bold: headings, chapter names, key terms
+     Moul        the site title only
+
+   Why the split: Siemreap has ONE weight. If bold text were set in
+   Siemreap the browser would fake it by smearing the strokes, which
+   looks wrong in Khmer. Battambang has a real 700 cut, so every bold
+   element is routed to it and nothing is ever synthesised.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&display=swap');
 
 :root {
-  /* ---- TO SWITCH TO SIEMREAP ----
-     Comment out the first line below and uncomment the second.
-     Note: Siemreap has only one weight, so bold text will be
-     synthesised by the browser and will look slightly smeared. */
-  --km-font: 'Battambang';
-  /* --km-font: 'Siemreap'; */
+  /* ---- the three faces ---- */
+  --km-read: 'Siemreap';       /* running text */
+  --km-emph: 'Battambang';     /* headings, bold, chapter names */
+  --km-title: 'Moul';          /* site title in the green bar */
 
-  --km-stack: var(--km-font), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --km-body: var(--km-stack);
-  --km-head: var(--km-stack);
+  /* Siemreap covers Khmer only, so Latin falls through to Battambang.
+     That is deliberate: English terms stay legible inside Khmer prose. */
+  --km-read-stack: var(--km-read), 'Battambang', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --km-emph-stack: var(--km-emph), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --km-display: var(--km-title), var(--km-emph), serif;
 
-  /* Moul is the traditional Khmer display face — site title only.
-     Never use it for body text; it is unreadable at small sizes. */
-  /* Display face for the site title and chapter names.
-     'Moul' is the lighter cut, closest to Khmer OS Muol Light.
-     Swap to 'Moul' below if you want the heavier traditional look. */
-  --km-display: 'Moul', var(--km-font), serif;
-  /* --km-display: 'Moul', var(--km-font), serif; */
-
-  /* Material composes its own font stack from these two variables and
-     applies it theme-wide. Overriding them here is what actually makes
-     the change stick in the nav, header, search and footer. */
-  --md-text-font: var(--km-font);
-  --md-text-font-family: var(--km-stack);
+  /* Material builds its own stack from these; overriding them is what
+     makes the change reach the nav, header, search and footer. */
+  --md-text-font: var(--km-read);
+  --md-text-font-family: var(--km-read-stack);
   --md-code-font: 'Roboto Mono';
 }
 
-/* Catch anything Material styles that the rules below don't name */
+/* ---- running text ---- */
+body, .md-typeset, .md-nav, .md-header, .md-footer,
 .md-grid, .md-container, .md-main, .md-sidebar, .md-search__input,
-.md-tabs, .md-footer, button, input, select, textarea {
-  font-family: var(--km-stack);
+.md-tabs, button, input, select, textarea {
+  font-family: var(--km-read-stack);
 }
 
-body, .md-typeset, .md-nav, .md-header, .md-footer {
-  font-family: var(--km-body);
-  /* Battambang sits tall and carries subscripts (ជើងអក្សរ) below the
-     baseline, so it needs more leading than a Latin face would. */
+body, .md-typeset {
+  /* Siemreap is lighter and sits smaller than Battambang at the same
+     size, so it needs a step up to stay comfortable at reading length. */
+  font-size: 0.84rem;
   line-height: 1.95;
-  font-size: 0.80rem;
 }
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3,
-.md-typeset h4, .md-nav__title {
-  font-family: var(--km-head);
+/* ---- everything bold goes to Battambang ---- */
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4,
+.md-typeset h5, .md-typeset h6,
+.md-typeset strong, .md-typeset b,
+.md-typeset table:not([class]) th,
+.md-typeset .admonition-title, .md-typeset summary,
+.md-nav__title {
+  font-family: var(--km-emph-stack);
   font-weight: 700;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
   line-height: 1.65;
 }
-
-.md-typeset h1 { font-size: 1.6rem; }
+.md-typeset h1 { font-size: 1.55rem; }
 .md-typeset h2 { margin-top: 2.2em; }
 
-/* Site title in the top bar.
-   Khmer sits tall, so the default block layout pushes it to the top of the
-   bar. Flex-centring the title row is what actually fixes the alignment. */
+/* ---- site title ---- */
 .md-header__title, .md-header__topic {
   display: flex;
   align-items: center;
 }
 .md-header__topic:first-child .md-ellipsis {
   font-family: var(--km-display);
-  /* Moul is display faces; bolding them is faux-bold and smears */
+  /* Moul has one weight only; bolding it is faux-bold and smears */
   font-weight: 400;
   font-size: 0.74rem;
   line-height: 1.5;
   padding-top: 0.1rem;   /* optical nudge: Khmer ascenders sit high */
 }
 
-/* ---- Sidebar navigation ---- */
+/* ---- sidebar navigation ---- */
 
-/* Chapter entries (top level): display face, no bold, one step smaller */
+/* Chapters: Battambang bold */
 .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
-  font-family: var(--km-display);
-  font-weight: 400;
-  font-size: 0.68rem;
+  font-family: var(--km-emph-stack);
+  font-weight: 700;
+  font-size: 0.72rem;
   line-height: 1.7;
 }
 
-/* Keep the gap BETWEEN chapters, which already reads well */
+/* Gap between chapters */
 .md-nav--primary > .md-nav__list > .md-nav__item { margin-top: 0.45rem; }
 
-/* Lesson entries (nested): tighter than chapters */
+/* Lessons: Siemreap, tighter */
 .md-nav--primary .md-nav .md-nav__link {
-  font-family: var(--km-stack);
-  font-size: 0.72rem;
+  font-family: var(--km-read-stack);
+  font-weight: 400;
+  font-size: 0.74rem;
   line-height: 1.45;
   padding: 0;
 }
@@ -99,42 +106,36 @@ body, .md-typeset, .md-nav, .md-header, .md-footer {
   padding: 0;
 }
 
-/* Fallback for any nav link not caught above */
 .md-nav__link { line-height: 1.6; }
 
-/* Tables: Khmer wraps badly when cramped */
-.md-typeset table:not([class]) { font-size: 0.72rem; line-height: 1.75; }
-.md-typeset table:not([class]) th { font-weight: 700; }
+/* ---- tables ---- */
+.md-typeset table:not([class]) { font-size: 0.75rem; line-height: 1.75; }
 
-/* Keep code, QGIS tool names and EPSG codes in a Latin monospace face */
+/* ---- code, QGIS tool names, EPSG codes ---- */
 code, .md-typeset code, pre, kbd, .md-typeset kbd {
   font-family: 'Roboto Mono', ui-monospace, 'Courier New', monospace;
   line-height: 1.5;
-  font-size: 0.86em;
+  font-size: 0.84em;
 }
 
-/* Admonitions (គោលដៅជំពូក / ចំណាំ boxes) */
+/* ---- admonitions, lists, cards ---- */
 .md-typeset .admonition, .md-typeset details { line-height: 1.9; }
-.md-typeset .admonition-title { font-weight: 700; line-height: 1.7; }
-
-/* Lists need breathing room between items */
+.md-typeset .admonition-title { line-height: 1.7; }
 .md-typeset ol li, .md-typeset ul li { margin-bottom: 0.45em; }
-
-/* Grid cards on the home page */
 .md-typeset .grid.cards > ul > li { line-height: 1.85; }
 
-/* ---- Print / PDF ---- */
-@media print {
-  body, .md-typeset { font-size: 11pt; line-height: 1.85; }
-  .md-typeset h1 { page-break-before: always; }
-  .md-typeset h1:first-of-type { page-break-before: avoid; }
-  .md-typeset table { page-break-inside: avoid; }
-}
-
-/* Figures */
+/* ---- figures ---- */
 .md-typeset figure { margin: 1.6em 0; }
 .md-typeset figure svg { width: 100%; height: auto; }
 .md-typeset figcaption {
-  font-size: 0.72rem; line-height: 1.7; margin-top: 0.5em;
+  font-size: 0.74rem; line-height: 1.7; margin-top: 0.5em;
   color: var(--md-default-fg-color--light);
+}
+
+/* ---- print / PDF ---- */
+@media print {
+  body, .md-typeset { font-size: 11.5pt; line-height: 1.85; }
+  .md-typeset h1 { page-break-before: always; }
+  .md-typeset h1:first-of-type { page-break-before: avoid; }
+  .md-typeset table { page-break-inside: avoid; }
 }
