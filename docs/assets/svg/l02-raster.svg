@@ -1,8 +1,8 @@
 <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" class="km-fig"><style>.km-fig{width:100%;height:auto}
 .km-fig text{font-family:var(--km-read-stack,'Siemreap',sans-serif);fill:var(--md-default-fg-color,#222)}
-.h{font-family:var(--km-emph-stack,'Battambang',sans-serif);font-weight:700;font-size:21px}
-.l{font-family:var(--km-emph-stack,'Battambang',sans-serif);font-weight:700;font-size:18px}
-.m{font-size:16px}
+.h{font-family:var(--km-emph-stack,'Battambang',sans-serif);font-weight:700;font-size:15px}
+.l{font-family:var(--km-emph-stack,'Battambang',sans-serif);font-weight:700;font-size:13px}
+.m{font-size:12px}
 .c{text-anchor:middle}
 .box{fill:var(--md-default-fg-color--lightest,#eee);stroke:var(--md-default-fg-color--lighter,#bbb);stroke-width:1.8}
 .frame{fill:none;stroke:var(--md-default-fg-color--lighter,#bbb);stroke-width:1.8}
