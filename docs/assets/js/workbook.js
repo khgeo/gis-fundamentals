@@ -455,7 +455,7 @@
   /* ---------------- Matching quiz ---------------- */
   function buildQuiz(el) {
     if (el.dataset.ready) return; el.dataset.ready = "1";
-    const q = QUIZZES[el.dataset.quiz]; if (!q) return;
+    const q = QUIZZES[el.dataset.quiz] || (window.WB_QUIZZES || {})[el.dataset.quiz]; if (!q) return;
     const start = () => {
       let pick = null, done = 0, tries = 0;
       el.innerHTML = `<div class="mq-title">${q.title}</div><div class="mq-hint">ចុចពាក្យនៅខាងឆ្វេង រួចចុចអត្ថន័យត្រូវគ្នានៅខាងស្ដាំ។</div>
