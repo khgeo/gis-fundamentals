@@ -45,7 +45,7 @@ body, .md-typeset, .md-nav, .md-header, .md-footer,
 body, .md-typeset {
   /* Siemreap is lighter and sits smaller than Battambang at the same
      size, so it needs a step up to stay comfortable at reading length. */
-  font-size: 0.84rem;
+  font-size: 0.75rem;
   line-height: 1.95;
 }
 
@@ -63,8 +63,8 @@ body, .md-typeset {
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
   line-height: 1.65;
 }
-.md-typeset h1 { font-size: 1.55rem; }
-.md-typeset h2 { margin-top: 2.2em; }
+.md-typeset h1 { font-size: 1.2rem; }
+.md-typeset h2 { margin-top: 1.5em; }
 
 /* ---- site title ---- */
 .md-header__title, .md-header__topic {
@@ -86,7 +86,7 @@ body, .md-typeset {
 .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
   font-family: var(--km-emph-stack);
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   line-height: 1.7;
 }
 
@@ -97,7 +97,7 @@ body, .md-typeset {
 .md-nav--primary .md-nav .md-nav__link {
   font-family: var(--km-read-stack);
   font-weight: 400;
-  font-size: 0.74rem;
+  font-size: 0.67rem;
   line-height: 1.45;
   padding: 0;
 }
@@ -109,7 +109,7 @@ body, .md-typeset {
 .md-nav__link { line-height: 1.6; }
 
 /* ---- tables ---- */
-.md-typeset table:not([class]) { font-size: 0.75rem; line-height: 1.75; }
+.md-typeset table:not([class]) { font-size: 0.68rem; line-height: 1.75; }
 
 /* ---- code, QGIS tool names, EPSG codes ---- */
 code, .md-typeset code, pre, kbd, .md-typeset kbd {
@@ -128,7 +128,7 @@ code, .md-typeset code, pre, kbd, .md-typeset kbd {
 .md-typeset figure { margin: 1.6em 0; }
 .md-typeset figure svg { width: 100%; height: auto; }
 .md-typeset figcaption {
-  font-size: 0.74rem; line-height: 1.7; margin-top: 0.5em;
+  font-size: 0.67rem; line-height: 1.7; margin-top: 0.5em;
   color: var(--md-default-fg-color--light);
 }
 
