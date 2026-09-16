@@ -1,0 +1,62 @@
+/* Workbook tools: lab maps and self-check boxes */
+
+.lab-map {
+  height: 480px;
+  margin: 1em 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  z-index: 0;
+}
+.lab-map img { max-width: none !important; }
+/* Leaflet sets Helvetica/Arial, which has no Khmer glyphs: use the book's stack */
+.lab-map.leaflet-container,
+.lab-map .leaflet-popup-content,
+.lab-map .leaflet-control { font-family: var(--md-text-font-family); }
+.lab-map .leaflet-popup-content,
+.lab-map .leaflet-control-layers,
+.lab-map-legend { color: #212121; font-size: 0.72rem; line-height: 1.6; }
+
+.lab-map-legend {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.lab-map-legend i {
+  display: inline-block; vertical-align: middle; margin-right: 6px;
+  width: 12px; height: 12px;
+}
+.lab-map-legend .lg-dot    { border-radius: 50%; background: var(--c); border: 1.5px solid #fff; box-shadow: 0 0 0 1px #999; }
+.lab-map-legend .lg-dot-sm { border-radius: 50%; background: var(--c); width: 7px; height: 7px; margin: 0 8px 0 3px; }
+.lab-map-legend .lg-box    { background: var(--c); opacity: 0.45; border: 1px solid var(--c); }
+.lab-map-legend .lg-line   { height: 0; border-top: 3px solid var(--c); }
+
+@media screen and (max-width: 600px) { .lab-map { height: 360px; } }
+
+.self-check {
+  margin: 0.8em 0;
+  padding: 0.6em 0.9em;
+  border-left: 4px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  border-radius: 0 4px 4px 0;
+}
+.self-check p { margin: 0 0 0.4em; }
+.self-check[data-state="ok"]    { border-left-color: #2e7d32; }
+.self-check[data-state="close"] { border-left-color: #f9a825; }
+.self-check[data-state="bad"]   { border-left-color: #c62828; }
+
+.sc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em; }
+.sc-input {
+  flex: 0 1 12em;
+  padding: 0.35em 0.6em;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+}
+.md-typeset .sc-button { padding: 0.3em 1em; margin: 0; font-size: 0.8em; }
+.sc-result { font-size: 0.85em; }
+.self-check[data-state="ok"]    .sc-result { color: #2e7d32; }
+.self-check[data-state="close"] .sc-result { color: #b28704; }
+.self-check[data-state="bad"]   .sc-result { color: #c62828; }

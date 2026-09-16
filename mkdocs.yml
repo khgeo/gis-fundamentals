@@ -39,6 +39,12 @@ theme:
 extra_css:
   - https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Siemreap&family=Moul&display=swap
   - assets/css/khmer.css
+  - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css
+  - assets/css/workbook.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js
+  - assets/js/workbook.js
 
 markdown_extensions:
   - admonition
