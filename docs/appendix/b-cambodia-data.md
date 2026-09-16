@@ -18,7 +18,11 @@
 | វិសាលភាព | ទូទាំងប្រទេស លើកលែងស្រទាប់តំបន់សិក្សាមួយចំនួន (មើល ក.៣) |
 
 !!! note "របៀបទាញយក"
-    ទាញយក `Cambodia.zip` ពីទំព័រ [Releases](https://github.com/khgeo/gis-fundamentals/releases) នៃឃ្លាំងសៀវភៅ។ ពន្លាឯកសារទៅក្នុងថតដែលផ្លូវ (path) **គ្មានដកឃ្លា និងគ្មានអក្សរខ្មែរ** ឧទាហរណ៍ `D:\GIS\Cambodia`។ ផ្លូវដែលមានដកឃ្លា ឬអក្សរខ្មែរ អាចធ្វើឲ្យឧបករណ៍ Processing មួយចំនួនក្នុង QGIS ដំណើរការមិនបាន។
+    [:material-download: ទាញយក Cambodia.zip](https://github.com/khgeo/gis-fundamentals/releases/latest/download/Cambodia.zip){ .md-button .md-button--primary }
+
+    ឬមើលកំណែទាំងអស់នៅទំព័រ [Releases](https://github.com/khgeo/gis-fundamentals/releases)។
+
+    ពន្លាឯកសារទៅក្នុងថតដែលផ្លូវ (path) **គ្មានដកឃ្លា និងគ្មានអក្សរខ្មែរ** ឧទាហរណ៍ `D:\GIS\Cambodia`។ ផ្លូវដែលមានដកឃ្លា ឬអក្សរខ្មែរ អាចធ្វើឲ្យឧបករណ៍ Processing មួយចំនួនក្នុង QGIS ដំណើរការមិនបាន។
 
 ```text
 Cambodia/
