@@ -62,7 +62,7 @@ def front():
     s.append(art(110,640,430,262,95,78))
     s.append(f'<rect x="0" y="{H-190}" width="{W}" height="190" fill="rgba(0,0,0,.28)"/>')
     s.append(f'<text x="60" y="{H-128}" font-size="26" font-weight="700" class="en">YAM Sarath</text>')
-    s.append(f'<text x="60" y="{H-96}" font-size="15" fill="#b2dfdb">ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងការគ្រប់គ្រងដីធ្លី</text>')
+    s.append(f'<text x="60" y="{H-96}" font-size="15" fill="#b2dfdb">ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងរៀបចំដែនដី</text>')
     s.append(f'<text x="60" y="{H-58}" font-size="14" fill="rgba(255,255,255,.75)">១៥ មេរៀន · ១៥ លំហាត់ QGIS · បោះពុម្ពលើកទី១ · ២០២៦</text>')
     s.append(f'<text x="{W-60}" y="{H-58}" font-size="13" text-anchor="end" fill="rgba(255,255,255,.75)" class="en">CC BY-SA 4.0</text>')
     s.append('</svg>')

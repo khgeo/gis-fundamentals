@@ -163,7 +163,7 @@ h2 {{ font-family: 'Battambang'; color: #00695c; font-size: 18pt; border-bottom:
 .pref p {{ line-height: 1.9; text-align: justify; }}
 </style></head><body>
 <div class="pg title"><h1>មូលដ្ឋានគ្រឹះនៃ<br>ប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</h1><div class="en">Fundamentals of Geographic Information Systems</div><div class="rule"></div>
-<div class="meta">សៀវភៅទី២ នៃស៊េរីសៀវភៅ GIS និងការយកព័ត៌មានពីចម្ងាយ</div><div class="meta">សម្រាប់ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងការគ្រប់គ្រងដីធ្លី</div>
+<div class="meta">សៀវភៅទី២ នៃស៊េរីសៀវភៅ GIS និងការយកព័ត៌មានពីចម្ងាយ</div><div class="meta">សម្រាប់ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងរៀបចំដែនដី</div>
 <div class="au">YAM Sarath</div><div class="meta">បោះពុម្ពលើកទី១ · ២០២៦</div></div>
 <div class="pg"><div class="copy"><b>មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</b><br>Fundamentals of Geographic Information Systems: A Khmer-language textbook<br>
 © ២០២៦ YAM Sarath · បោះពុម្ពលើកទី១<br><br>
