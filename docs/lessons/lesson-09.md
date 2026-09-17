@@ -78,6 +78,11 @@
 | **overlaps** | ខាងក្នុងត្រួតមួយផ្នែក ប្រភេទធរណីមាត្រដូចគ្នា | តំបន់ការពារណាត្រួតលើដីសម្បទាន? |
 | **equals** | ធរណីមាត្រដូចគ្នាទាំងស្រុង | រកវត្ថុស្ទួន |
 
+<figure markdown>
+--8<-- "assets/svg/l09-predicates.svg"
+<figcaption>រូបទី៩.១៖ ទំនាក់ទំនងលំហសំខាន់ៗ។ touches overlaps within contains និង equals សុទ្ធតែជាករណីនៃ intersects ឯ disjoint ជាផ្ទុយពី intersects។</figcaption>
+</figure>
+
 !!! example "ពិសោធន៍៖ ទំនាក់ទំនងលំហ"
     អូសប្រអប់ A និង B ហើយមើលថាទំនាក់ទំនងណាពិត។ តើ touches និង intersects ខុសគ្នាដូចម្ដេច? ធ្វើឲ្យ A within B ហើយពិនិត្យ contains។
 
@@ -117,6 +122,11 @@ QGIS មានវិធីពីរ៖
 !!! danger "កំហុសទូទៅបំផុត"
     ភ្លេចប្ដូរជម្រើសពី «creating new selection» ធ្វើឲ្យជំហានទីពីរលុបជំហានទីមួយ ដោយគ្មានសារព្រមាន។ ពិនិត្យចំនួនវត្ថុដែលបានជ្រើសបន្ទាប់ពីជំហាននីមួយៗជានិច្ច។
 
+<figure markdown>
+--8<-- "assets/svg/l09-selection.svg"
+<figcaption>រូបទី៩.២៖ ជម្រើស Modify current selection ជាប្រមាណវិធីតក្កវិជ្ជា៖ រង្វង់ឆ្វេង = ការជ្រើសមុន · រង្វង់ស្ដាំ = លទ្ធផលសំណួរថ្មី · ពណ៌ = លទ្ធផលចុងក្រោយ។</figcaption>
+</figure>
+
 ### ៩.៣.៥. គុណលក្ខណៈ ទល់នឹង ទីតាំង
 
 សំណួរ «សាលាណាខ្លះនៅខេត្តកំពង់ឆ្នាំង?» អាចឆ្លើយបានពីរវិធី៖
@@ -149,6 +159,8 @@ Select by Location៖ within `flood2011_fixed` **selecting within current select
 ### ជំហានទី៤៖ ឃុំជាប់ខ្សាម
 
 ជ្រើសឃុំខ្សាម (`KH040304`)។ Select by Location ឃុំ **touches** ឃុំដែលបានជ្រើស → **៤** ឃុំ៖ Svay Chrum · Phsar Chhnang · Srae Thmei · B'er។ បើប្រើ **intersects** បាន **៥** ព្រោះរាប់ខ្សាមខ្លួនឯង។
+
+<div class="lab-chart" data-chart="l09-schools"></div>
 
 ### សេចក្ដីសន្និដ្ឋានដែលសមស្រប
 

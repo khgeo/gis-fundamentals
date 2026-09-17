@@ -146,6 +146,35 @@
 
   /* ---------------- Charts, matrices, quizzes ---------------- */
   const CHARTS = {
+    "l04-school-types": { title: "សាលារៀនក្នុងខេត្តកំពង់ឆ្នាំងតាមប្រភេទ (ទីតាំងក្នុងព្រំខេត្ត)", delta: false,
+      categories: ["Primary", "Pre school", "College", "Lycee G7-12"], colors: ["#26a69a", "#26a69a", "#26a69a", "#26a69a"],
+      series: [{ name: "", values: [263, 77, 61, 14] }], note: "ប្រភព៖ Kh_School · សរុប ៤១៥ សាលា" },
+    "l05-density": { title: "ដង់ស៊ីតេប្រជាជនខ្ពស់បំផុត ខេត្តកំពង់ឆ្នាំង (នាក់/គម² · ២០០៨)", delta: false,
+      categories: ["B'er", "Phsar Chhnang", "Ponley"], colors: ["#cb181d", "#fb6a4a", "#fcae91"],
+      series: [{ name: "", values: [2821, 1906, 1165] }], note: "ប្រជាជនពី Census_Commune ២០០៨ · ផ្ទៃពី $area នៃ Kh_Commune_area" },
+    "l06-accuracy": { title: "ភាពត្រឹមត្រូវប្រហែលនៃឧបករណ៍ GNSS (ម៉ែត្រ · កាន់តែខ្លី កាន់តែល្អ)", delta: false, scale: "sqrt", dec: 2,
+      categories: ["ទូរស័ព្ទ", "GPS ដៃ", "GNSS ពីរហ្វ្រេកង់", "RTK"], colors: ["#ef5350", "#ffa726", "#66bb6a", "#26a69a"],
+      series: [{ name: "", values: [8, 3, 0.6, 0.02] }], note: "តម្លៃធម្មតាក្នុងលក្ខខណ្ឌចំហ។ ក្រោមដើមឈើ ឬជិតអគារ កំហុសអាចធំជាងនេះច្រើន។" },
+    "l08-kkg-years": { title: "ក្រប់ដីក្នុងស្រទាប់ KKG_LC ទាំងបីឆ្នាំ (ហិកតា · មុន Clip)", scale: "sqrt",
+      categories: ["ដីកសិកម្ម", "ដីទំនេរ", "ទឹក", "តំបន់ទីក្រុង"], colors: ["#f9a825", "#a1887f", "#1976d2", "#d32f2f"],
+      series: [{ name: "១៩៩៧", values: [47852, 26908, 14908, 620] }, { name: "២០០៣", values: [26973, 126893, 21938, 453] }, { name: "២០១៥", values: [132499, 79220, 38848, 11490] }],
+      note: "ដីទំនេរកើន ៥ ដងនៅឆ្នាំ ២០០៣ រួចថយវិញ ខណៈដីកសិកម្មធ្លាក់ពាក់កណ្ដាល៖ លំនាំនេះទំនងមកពីវិធីផលិតផែនទីខុសគ្នា (MRC · JICA · MoE)។ ភាគរយខាងលើ ប្រៀបធៀបឆ្នាំ ១៩៩៧ និង ២០១៥។" },
+    "l09-schools": { title: "សំណួរលើសាលារៀន ៤១៥ ក្នុងខេត្តកំពង់ឆ្នាំង", delta: false,
+      categories: ["សាលាទាំងអស់ក្នុងខេត្ត", "ក្នុងចម្ងាយ ១ គម ពីផ្លូវជាតិ", "ក្នុងតំបន់ជំនន់ ២០១១", "សាលាបឋមសិក្សាក្នុងជំនន់"], colors: ["#90a4ae", "#ff7043", "#42a5f5", "#1565c0"],
+      series: [{ name: "", values: [415, 119, 80, 65] }] },
+    "l10-classes": { title: "ប្រជាជនឆ្នាំ ២០០៨ តាមចម្ងាយទៅមណ្ឌលសុខភាពជិតបំផុត · ខេត្តកំពង់ឆ្នាំង", delta: false,
+      categories: ["០–២ គម (១៨៩ ភូមិ)", "២–៥ គម (២៤០ ភូមិ)", "៥–១០ គម (១២០ ភូមិ)", "លើស ១០ គម (១៩ ភូមិ)"], colors: ["#1a9850", "#a6d96a", "#fdae61", "#d73027"],
+      series: [{ name: "", values: [191178, 184126, 85912, 9596] }], note: "៩៥ ៥០៨ នាក់ (២០%) រស់នៅលើស ៥ គម តាមបន្ទាត់ត្រង់" },
+    "l12-zonal": { title: "ចម្ងាយមធ្យមទៅមណ្ឌលសុខភាពជិតបំផុត តាមស្រុក (គម · Zonal statistics)", delta: false, dec: 1,
+      categories: ["ទឹកផុស", "កំពង់លែង", "សាមគ្គីមានជ័យ", "បរិបូណ៌", "រលាប្អៀរ", "ជលគីរី", "កំពង់ត្រឡាច", "ក្រុងកំពង់ឆ្នាំង"],
+      colors: ["#d73027", "#f46d43", "#fdae61", "#fee08b", "#d9ef8b", "#a6d96a", "#66bd63", "#1a9850"],
+      series: [{ name: "", values: [10.0, 8.5, 6.6, 5.6, 5.2, 4.6, 3.8, 2.6] }], note: "រ៉ាស្ទ័រ Proximity ១០០ ម ពីមណ្ឌលសុខភាពទូទាំងប្រទេស" },
+    "l13-mae": { title: "កំហុសដាច់ខាតមធ្យម (MAE) នៃ IDW អក្ខរកម្មភូមិ តាមស្វ័យគុណ p", delta: false, dec: 1,
+      categories: ["p = ១", "p = ២", "p = ៤"], colors: ["#7986cb", "#3949ab", "#7986cb"],
+      series: [{ name: "", values: [10.7, 9.8, 10.4] }], note: "ពិន្ទុភាគរយ · មធ្យមនៃការបំបែក train/test ២០ ដង · ភាពខុសគ្នារវាង p តូចជាងកំហុសខ្លួនឯង" },
+    "l14-sensitivity": { title: "ផ្ទៃពិន្ទុសមស្របភាព ≥ ០,៨ តាមសេណារីយ៉ូទម្ងន់ (ហិកតា)", delta: false,
+      categories: ["ផ្លូវ ០,៤ · សាលា ០,៦", "ផ្លូវ ០,៧ · សាលា ០,៣"], colors: ["#26a69a", "#00897b"],
+      series: [{ name: "", values: [9396, 10298] }], note: "ផ្ទៃប្ដូរតិច ប៉ុន្តែទីតាំងប្ដូរ៖ ត្រូវប្រៀបធៀបផែនទី មិនមែនតែតួលេខ" },
     "lab-11-classes": {
       title: "ផ្ទៃក្រប់ដីខេត្តកោះកុង (ហិកតា)",
       categories: ["ព្រៃឈើ", "ដីកសិកម្ម", "ដីទំនេរ", "ទឹក", "តំបន់ទីក្រុង"],
@@ -400,15 +429,15 @@
   function buildChart(el) {
     if (el.dataset.ready) return; el.dataset.ready = "1";
     const c = CHARTS[el.dataset.chart]; if (!c) return;
-    const max = Math.max(...c.series.flatMap((s) => s.values));
+    const max = Math.max(...c.series.flatMap((s) => s.values)), dec = c.dec || 0;
     const sc = (v) => c.scale === "sqrt" ? Math.sqrt(v) / Math.sqrt(max) : v / max;
     let html = `<div class="ch-title">${c.title}</div>`;
     c.categories.forEach((cat, i) => {
       const v0 = c.series[0].values[i], v1 = c.series[c.series.length - 1].values[i];
-      const ch = ((v1 - v0) / v0) * 100;
-      html += `<div class="ch-group"><div class="ch-cat">${cat}<span class="ch-delta ${ch < 0 ? "neg" : "pos"}">${ch < 0 ? "▼" : "▲"} ${fmt(Math.abs(ch), 0)}%</span></div>`;
+      const ch = ((v1 - v0) / v0) * 100, showDelta = c.delta !== false && c.series.length > 1;
+      html += `<div class="ch-group"><div class="ch-cat">${cat}${showDelta ? `<span class="ch-delta ${ch < 0 ? "neg" : "pos"}">${ch < 0 ? "▼" : "▲"} ${fmt(Math.abs(ch), 0)}%</span>` : ""}</div>`;
       c.series.forEach((s, j) => {
-        html += `<div class="ch-row"><span class="ch-sname">${s.name}</span><span class="ch-bar" style="--w:${(sc(s.values[i]) * 100).toFixed(1)}%;--c:${c.colors[i]};opacity:${j === 0 ? 0.55 : 1}"></span><span class="ch-val">${fmt(s.values[i])}</span></div>`;
+        html += `<div class="ch-row"><span class="ch-sname">${s.name}</span><span class="ch-bar" style="--w:${(sc(s.values[i]) * 100).toFixed(1)}%;--c:${c.colors[i]};opacity:${c.series.length > 1 ? 0.45 + 0.55 * j / (c.series.length - 1) : 1}"></span><span class="ch-val">${fmt(s.values[i], dec)}</span></div>`;
       });
       html += "</div>";
     });
