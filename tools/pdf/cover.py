@@ -61,7 +61,7 @@ def front():
     s.append('<text x="60" y="338" font-size="17" fill="#b2dfdb">ទ្រឹស្ដី · ការអនុវត្តលើ QGIS · ទិន្នន័យពិតរបស់កម្ពុជា</text>')
     s.append(art(110,640,430,262,95,78))
     s.append(f'<rect x="0" y="{H-190}" width="{W}" height="190" fill="rgba(0,0,0,.28)"/>')
-    s.append(f'<text x="60" y="{H-128}" font-size="26" font-weight="700" class="en">YAM Sarath</text>')
+    s.append(f'<text x="60" y="{H-128}" font-size="26" font-weight="700">យាំ សារដ្ឋ</text><text x="190" y="{H-128}" font-size="20" class="en" fill="#b2dfdb">YAM Sarath</text>')
     s.append(f'<text x="60" y="{H-96}" font-size="15" fill="#b2dfdb">ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងរៀបចំដែនដី</text>')
     s.append(f'<text x="60" y="{H-58}" font-size="14" fill="rgba(255,255,255,.75)">១៥ មេរៀន · ១៥ លំហាត់ QGIS · បោះពុម្ពលើកទី១ · ២០២៦</text>')
     s.append(f'<text x="{W-60}" y="{H-58}" font-size="13" text-anchor="end" fill="rgba(255,255,255,.75)" class="en">CC BY-SA 4.0</text>')
@@ -95,7 +95,7 @@ def wrap(pages, paper_mm=0.1, bleed=3):
     wmm, hmm = 2 * 210 + spine + 2 * bleed, 297 + 2 * bleed
     sp = f'''<div style="position:absolute;left:{bleed+210}mm;top:0;width:{spine}mm;height:{hmm}mm;background:#003d36;display:flex;align-items:center;justify-content:center">
 <div style="transform:rotate(90deg);white-space:nowrap;color:#fff;font-family:Battambang;font-size:{min(11, spine*0.9):.1f}pt;display:flex;gap:10mm;align-items:center">
-<span style="font-family:Moul">មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</span><span style="font-family:Georgia">YAM Sarath</span><span style="color:#ffab91">សៀវភៅទី ២</span></div></div>'''
+<span style="font-family:Moul">មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</span><span style="font-family:Battambang;font-weight:700">យាំ សារដ្ឋ</span><span style="color:#ffab91">សៀវភៅទី ២</span></div></div>'''
     page = lambda x, svg: f'<div style="position:absolute;left:{x}mm;top:{bleed}mm;width:210mm;height:297mm">{svg}</div>'
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>@page{{size:{wmm}mm {hmm}mm;margin:0}}html,body{{margin:0}}"
             f"body{{width:{wmm}mm;height:{hmm}mm;position:relative;background:#00493f;overflow:hidden}}svg{{display:block;width:210mm;height:297mm}}"

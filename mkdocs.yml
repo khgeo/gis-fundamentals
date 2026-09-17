@@ -1,11 +1,11 @@
 site_name: មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
 site_description: សៀវភៅសិក្សា GIS ជាភាសាខ្មែរ សម្រាប់វគ្គសិក្សា ១ ឆមាស
-site_author: YAM Sarath
+site_author: YAM Sarath (យាំ សារដ្ឋ)
 site_url: https://khgeo.github.io/gis-fundamentals/
 repo_url: https://github.com/khgeo/gis-fundamentals
 repo_name: gis-fundamentals
 edit_uri: edit/main/docs/
-copyright: CC BY-SA 4.0 — អាចប្រើ និងកែសម្រួលបាន ដោយដកស្រង់ប្រភព
+copyright: CC BY-SA 4.0 · អាចប្រើ និងកែសម្រួលបាន ដោយដកស្រង់ប្រភព
 
 theme:
   name: material
@@ -75,6 +75,14 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  homepage: https://khgeo.github.io/
+  social:
+    - icon: material/bookshelf
+      link: https://khgeo.github.io/
+      name: ស៊េរីសៀវភៅទាំង ៤
+
   # Uncomment after `pip install mkdocs-with-pdf` to build a single PDF:
   # - with-pdf:
   #     output_path: pdf/gis-fundamentals.pdf

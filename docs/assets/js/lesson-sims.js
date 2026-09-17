@@ -667,7 +667,7 @@
   });
 
   function init() { document.querySelectorAll(".sim[data-sim]").forEach((el) => { if (el.dataset.ready) return; el.dataset.ready = "1";
-    const f = SIMS[el.dataset.sim]; if (f) Promise.resolve(f(el)).catch((e) => { console.error(e); el.textContent = "Simulator error: " + e.message; }); else el.textContent = "Unknown simulator: " + el.dataset.sim; }); }
+    const f = SIMS[el.dataset.sim] || (window.EXTRA_SIMS || {})[el.dataset.sim]; if (f) Promise.resolve(f(el)).catch((e) => { console.error(e); el.textContent = "Simulator error: " + e.message; }); else el.textContent = "Unknown simulator: " + el.dataset.sim; }); }
   if (typeof document$ !== "undefined") document$.subscribe(init);
   else if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

@@ -164,15 +164,15 @@ h2 {{ font-family: 'Battambang'; color: #00695c; font-size: 18pt; border-bottom:
 </style></head><body>
 <div class="pg title"><h1>មូលដ្ឋានគ្រឹះនៃ<br>ប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</h1><div class="en">Fundamentals of Geographic Information Systems</div><div class="rule"></div>
 <div class="meta">សៀវភៅទី២ នៃស៊េរីសៀវភៅ GIS និងការយកព័ត៌មានពីចម្ងាយ</div><div class="meta">សម្រាប់ថ្នាក់បរិញ្ញាបត្រ ឆ្នាំទី២ ឆមាសទី២ · ដេប៉ាតឺម៉ង់ភូមិវិទ្យា និងរៀបចំដែនដី</div>
-<div class="au">YAM Sarath</div><div class="meta">បោះពុម្ពលើកទី១ · ២០២៦</div></div>
+<div class="au" style="font-family:Battambang">យាំ សារដ្ឋ</div><div class="meta" style="font-family:Georgia">YAM Sarath</div><div class="meta">បោះពុម្ពលើកទី១ · ២០២៦</div></div>
 <div class="pg"><div class="copy"><b>មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ</b><br>Fundamentals of Geographic Information Systems: A Khmer-language textbook<br>
-© ២០២៦ YAM Sarath · បោះពុម្ពលើកទី១<br><br>
+© ២០២៦ យាំ សារដ្ឋ (YAM Sarath) · បោះពុម្ពលើកទី១<br><br>
 ចេញផ្សាយក្រោមអាជ្ញាបណ្ណ <b>Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</b>។ អ្នកអាចចម្លង ចែកចាយ និងកែសម្រួល ដោយត្រូវដកស្រង់អ្នកនិពន្ធ និងចែករំលែកក្រោមអាជ្ញាបណ្ណដដែល។<br><br>
 ទិន្នន័យក្នុងលំហាត់ជាកម្មសិទ្ធិរបស់ស្ថាប័នដែលផលិត ហើយមិនស្ថិតក្រោមអាជ្ញាបណ្ណសៀវភៅនេះទេ (មើលឧបសម្ព័ន្ធ ខ)។<br>
 ផែនទីមូលដ្ឋានក្នុងកំណែអនឡាញ © អ្នករួមចំណែក OpenStreetMap។<br><br>
 កំណែអនឡាញអន្តរកម្ម៖ {ONLINE}<br>ប្រភពកូដ និងទិន្នន័យ៖ https://github.com/khgeo/gis-fundamentals<br><br>
 ពុម្ពអក្សរ៖ Siemreap Battambang Moul (Danh Hong · SIL Open Font License)<br>
-ការដកស្រង់៖ YAM Sarath (2026). មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ [Fundamentals of GIS: A Khmer-language textbook]. CC BY-SA 4.0.</div></div>
+ការដកស្រង់៖ YAM Sarath [យាំ សារដ្ឋ] (2026). មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ [Fundamentals of GIS: A Khmer-language textbook]. CC BY-SA 4.0.</div></div>
 <div class="pg pref" style="height:auto;overflow:visible"><h2>អំពីសៀវភៅនេះ</h2>
 <p>សៀវភៅនេះជាឯកសារបង្រៀនសម្រាប់មុខវិជ្ជា មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ ៣ ក្រេឌីត ៤៥ ម៉ោង។ វាមានពីរផ្នែកធំ៖ <b>មេរៀនទ្រឹស្ដី ១៥</b> (៣ ម៉ោងក្នុងមួយមេរៀន) និង <b>សៀវភៅអនុវត្ត ១៥ លំហាត់</b> លើកម្មវិធី QGIS 3.34 LTR ដែលនិស្សិតធ្វើដោយខ្លួនឯង។</p>
 <p>មេរៀននីមួយៗចាប់ផ្ដើមដោយស្ថានភាពជាក់ស្ដែងនៅកម្ពុជា បង្ហាញទ្រឹស្ដីស្នូល ឧទាហរណ៍ដែលបានដោះស្រាយជាមួយទិន្នន័យពិត ការយល់ច្រឡំដែលត្រូវប្រុងប្រយ័ត្ន សំណួររំលឹក និងកំណត់សម្គាល់សម្រាប់គ្រូ។ ឧទាហរណ៍នីមួយៗបញ្ជាក់ទាំង «សេចក្ដីសន្និដ្ឋានដែលសមស្រប» និង «អ្វីដែលមិនអាចសន្និដ្ឋាន»។</p>
@@ -254,7 +254,7 @@ async def render(chrome_path=None):
         if kind == "divider": parent = w.add_outline_item(title, offset + page - 1)
         else: w.add_outline_item(title, offset + page - 1, parent=parent if _ else None)
     for pgx in PdfReader(os.path.join(OUT, "backcover.pdf")).pages: w.add_page(pgx)
-    w.add_metadata({"/Title": TITLE + " (Fundamentals of GIS)", "/Author": "YAM Sarath", "/Subject": "Khmer-language GIS textbook", "/Keywords": "GIS, QGIS, Cambodia, Khmer"})
+    w.add_metadata({"/Title": TITLE + " (Fundamentals of GIS)", "/Author": "YAM Sarath (យាំ សារដ្ឋ)", "/Subject": "Khmer-language GIS textbook", "/Keywords": "GIS, QGIS, Cambodia, Khmer"})
     final = os.path.join(OUT, "fundamentals-of-gis.pdf")
     with open(final, "wb") as f: w.write(f)
     # ---- wraparound cover for a print shop (spine from page count)

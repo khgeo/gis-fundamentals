@@ -92,7 +92,7 @@ not yet standardised nationally. See `docs/glossary.md` and open an Issue or PR.
 ## Citation
 
 ```
-YAM Sarath (2026). មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
+YAM Sarath [យាំ សារដ្ឋ] (2026). មូលដ្ឋានគ្រឹះនៃប្រព័ន្ធព័ត៌មានភូមិសាស្ត្រ
 [Fundamentals of GIS: A Khmer-language textbook]. CC BY-SA 4.0.
 https://github.com/khgeo/gis-fundamentals
 ```
