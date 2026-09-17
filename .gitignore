@@ -18,3 +18,7 @@ data/**/*.tif
 data/**/*.img
 data/**/*.zip
 !data/**/README.md
+
+# PDF build output
+book/
+site/

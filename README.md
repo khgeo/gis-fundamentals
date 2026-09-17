@@ -62,16 +62,21 @@ mkdocs build          # static site in ./site
 
 ## Export a PDF
 
-Uncomment the `with-pdf` plugin block in `mkdocs.yml`, then:
+The whole book (cover, title page, table of contents, 15 lessons, 15 labs, appendices, glossary, back cover) is built into one A4 PDF with Chromium, so Khmer text is shaped correctly and charts, figures and simulators are printed. Interactive parts show their initial state with a QR code to the online page.
+
+**On GitHub:** Actions → **Build PDF book** → *Run workflow*, then download the artifact. Publishing a Release also attaches the PDF to it.
+
+**On your computer:**
 
 ```bash
-pip install mkdocs-with-pdf
-mkdocs build          # PDF lands in site/pdf/
+pip install -r requirements.txt -r tools/pdf/requirements.txt
+playwright install chromium
+mkdocs build
+python tools/pdf/build_book.py
 ```
 
-> **Khmer PDF note:** the PDF renderer must have a Khmer font installed on the build
-> machine, or Khmer text renders as boxes. On Ubuntu:
-> `sudo apt install fonts-khmeros fonts-noto-khmer`
+Output in `book/`: `fundamentals-of-gis.pdf` (reading/digital) and `cover-wrap-print.pdf` (back + spine + front with 3 mm bleed for a print shop; spine width is computed from the page count for 80 gsm paper).
+Install the Khmer fonts **Battambang**, **Siemreap** and **Moul** first (Google Fonts, SIL OFL).
 
 ## Teaching datasets
 
