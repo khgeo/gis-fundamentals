@@ -45,6 +45,7 @@ extra_css:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js
+  - assets/js/gis-widgets.js
   - assets/js/lesson-sims.js
   - assets/js/workbook.js
 
@@ -112,6 +113,7 @@ nav:
   - ជំពូកទី៥៖ ការអនុវត្ត និងគម្រោង:
       - មេរៀនទី១៤៖ ការវិភាគសមស្របភាពពហុលក្ខខណ្ឌ: lessons/lesson-14.md
       - មេរៀនទី១៥៖ ការគ្រប់គ្រងគម្រោង ការចែករំលែក និងគម្រោងបញ្ចប់វគ្គ: lessons/lesson-15.md
+  - ស្លាយបង្រៀន: slides/index.md
   - សៀវភៅអនុវត្ត (លំហាត់ QGIS):
       - លំហាត់ទី១៖ GIS និងការគិតតាមលំហ: workbook/lab-01.md
       - លំហាត់ទី២៖ គំរូទិន្នន័យវ៉ិចទ័រ និងឋានលេខា: workbook/lab-02.md
