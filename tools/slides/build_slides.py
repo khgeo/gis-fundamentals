@@ -20,7 +20,7 @@ ONLINE = "https://khgeo.github.io/gis-fundamentals/"
 PAGE_EXT = "/"
 C1, C2, C3, BG = "#00695c", "#ff7043", "#004d40", "#f1f8f7"
 CSS_FILES = ["assets/css/lesson-sims.css"]
-JS_FILES = ["assets/js/gis-widgets.js", "assets/js/lesson-sims.js"]
+JS_FILES = ["assets/js/gis-widgets.js", "assets/js/lesson-sims.js", "assets/js/offline-pwa.js"]
 VISUALS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visuals.json")
 # -----------------------------------------------------------------------------
 
