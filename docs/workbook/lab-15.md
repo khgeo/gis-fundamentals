@@ -47,7 +47,7 @@ D:/GIS/lab10_health_access/
 3. ក្នុងប្រអប់ **Handle Unavailable Layers** ចុច **Auto-Find** ឬ **Browse** ដើម្បីជួសជុល។ រក្សាទុក។
 4. ចម្លងថតទាំងមូលទៅ USB ឬថតផ្សេង ហើយបើកគម្រោងពីទីនោះ។ តើស្រទាប់នៅតែបង្ហាញឬទេ?
 
-**សំណួរ៖** ហេតុអ្វីផ្លូវ absolute (`C:/Users/...`) ធ្វើឲ្យគម្រោងខូចពេលផ្ញើទៅអ្នកផ្សេង?
+**សំណួរ៖** ហេតុអ្វីផ្លូវ absolute (`C:/Users/...`) ធ្វើឱ្យគម្រោងខូចពេលផ្ញើទៅអ្នកផ្សេង?
 
 ## សកម្មភាពទី៣៖ ខ្ចប់គម្រោង · ២០ នាទី
 
@@ -105,6 +105,6 @@ D:/GIS/lab10_health_access/
 </div>
 
 <div class="self-check" data-answer="Relative|relative path|ផ្លូវ relative" markdown>
-**៣.** ជម្រើស Save paths ណាដែលធ្វើឲ្យគម្រោងចល័តបាន?
+**៣.** ជម្រើស Save paths ណាដែលធ្វើឱ្យគម្រោងចល័តបាន?
 </div>
 

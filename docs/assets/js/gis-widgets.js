@@ -111,7 +111,7 @@
       q(".we-av").textContent = kh((a / s).toFixed(2)); q(".we-bv").textContent = kh((b / s).toFixed(2)); q(".we-cv").textContent = kh((c / s).toFixed(2));
       let best = [0, 0, -1]; const g = f1.map((r, i) => r.map((v, j) => { const w = (a * v + b * f2[i][j] + c * f3[i][j]) / s; if (w > best[2]) best = [i, j, w]; return w; }));
       paint(cv, g, (v) => rampCol(v, 0, 1, ["#d73027", "#fc8d59", "#fee08b", "#91cf60", "#1a9850"]));
-      out.innerHTML = `ទម្ងន់ត្រូវបានធ្វើឲ្យបូកគ្នា = ១ · ក្រឡាល្អបំផុតនៅជួរដេក ${kh(best[0])} ជួរឈរ ${kh(best[1])} (ពិន្ទុ ${kh(best[2].toFixed(2))})<br><span class="sim-hint">បៃតង = សមស្រប · ប្ដូរទម្ងន់ ហើយមើលថាតំបន់បៃតងរំកិលទៅណា</span>`; };
+      out.innerHTML = `ទម្ងន់ត្រូវបានធ្វើឱ្យបូកគ្នា = ១ · ក្រឡាល្អបំផុតនៅជួរដេក ${kh(best[0])} ជួរឈរ ${kh(best[1])} (ពិន្ទុ ${kh(best[2].toFixed(2))})<br><span class="sim-hint">បៃតង = សមស្រប · ប្ដូរទម្ងន់ ហើយមើលថាតំបន់បៃតងរំកិលទៅណា</span>`; };
     el.querySelectorAll("input").forEach((i) => i.addEventListener("input", draw)); draw();
   };
 })();
